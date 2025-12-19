@@ -72,12 +72,15 @@ function keycontrol(){
     if(key.shift){
         moveVector[1]+=1;
     }
-    /*if(moveVector[0]!=0 || moveVector[1]!=0 || moveVector[2]!=0){
+    if(auto){
+    //moveVector should be normalize
+    if(moveVector[0]!=0 || moveVector[1]!=0 || moveVector[2]!=0){
         const size=Math.sqrt(moveVector[0]*moveVector[0]+moveVector[1]*moveVector[1]+moveVector[2]*moveVector[2]);
         for(let k=0; k<3; ++k){
-            //camera[k]+=spd*moveVector[k]/size;
+            moveVector[k]=moveVector[k]/(size*2);
         }
-    }*/
+    }
+    }
 }
 window.addEventListener("mousemove",e=>{
     rotation[1]=-e.movementY/10;

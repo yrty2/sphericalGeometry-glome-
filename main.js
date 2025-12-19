@@ -2,6 +2,7 @@ let moveVector=[0,0,0];
 let rotation=[0,0,0];
 const r=300;
 let frames=0;
+let auto=false;
 const camera=[0,0,0];//pos-cam->viewpos
 const canvas=document.querySelector(".canvas");
 canvas.width=screen.width-4;

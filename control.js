@@ -25,6 +25,9 @@ window.addEventListener("keydown",e=>{
     if(e.code=="ShiftLeft"){
         key.shift=true;
     }
+    if(e.code=="KeyT"){
+        auto=!auto;
+    }
 });
 window.addEventListener("keyup",e=>{
     if(e.code=="KeyW"){
@@ -48,7 +51,9 @@ window.addEventListener("keyup",e=>{
 });
 function keycontrol(){
     const spd=10;
+    if(!auto){
     moveVector=[0,0,0];
+    }
     if(key.w){
         moveVector[2]+=1;
     }
